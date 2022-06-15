@@ -6,7 +6,7 @@
 #
 astor==0.8.1
     # via -r test-requirements.in
-astroid==2.11.3
+astroid==2.11.6
     # via pylint
 async-generator==1.10
     # via -r test-requirements.in
@@ -97,7 +97,7 @@ pyflakes==2.4.0
     # via flake8
 pygments==2.10.0
     # via ipython
-pylint==2.13.8
+pylint==2.14.2
     # via -r test-requirements.in
 pyopenssl==22.0.0
     # via -r test-requirements.in
@@ -120,6 +120,8 @@ tomli==2.0.1
     #   mypy
     #   pylint
     #   pytest
+tomlkit==0.11.0
+    # via pylint
 traitlets==5.1.1
     # via
     #   ipython
