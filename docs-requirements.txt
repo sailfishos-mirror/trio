@@ -34,7 +34,7 @@ idna==3.3
     #   requests
 imagesize==1.4.1
     # via sphinx
-immutables==0.18
+immutables==0.19
     # via -r docs-requirements.in
 incremental==21.3.0
     # via towncrier
