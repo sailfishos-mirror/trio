@@ -35,7 +35,9 @@ decorator==5.1.1
 dill==0.3.5.1
     # via pylint
 exceptiongroup==1.0.0rc9 ; python_version < "3.11"
-    # via -r test-requirements.in
+    # via
+    #   -r test-requirements.in
+    #   pytest
 flake8==4.0.1
     # via -r test-requirements.in
 idna==3.4
@@ -89,8 +91,6 @@ prompt-toolkit==3.0.31
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
-py==1.11.0
-    # via pytest
 pycodestyle==2.8.0
     # via flake8
 pycparser==2.21
@@ -105,7 +105,7 @@ pyopenssl==22.1.0
     # via -r test-requirements.in
 pyparsing==3.0.9
     # via packaging
-pytest==7.1.2
+pytest==7.2.0
     # via
     #   -r test-requirements.in
     #   pytest-cov
