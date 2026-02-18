@@ -2920,6 +2920,27 @@ def test_trio_run_strict_before_started(
         assert should_be_raiser_exc.exceptions == raiser_exc.exceptions
 
 
+async def test_start_exception_preserves_cause_and_context() -> None:
+    """Regression test for #3261: exceptions raised before task_status.started()
+    should preserve __cause__ and __context__."""
+
+    async def task(*, task_status: _core.TaskStatus[None]) -> None:
+        e = ValueError("foo")
+        e.__cause__ = SyntaxError("bar")
+        e.__context__ = TypeError("baz")
+        raise e
+
+    with pytest.RaisesGroup(
+        pytest.RaisesExc(
+            ValueError,
+            check=lambda exc: isinstance(exc.__cause__, SyntaxError)
+            and isinstance(exc.__context__, TypeError),
+        ),
+    ):
+        async with _core.open_nursery() as nursery:
+            await nursery.start(task)
+
+
 async def test_internal_error_old_nursery_multiple_tasks() -> None:
     async def error_func() -> None:
         raise ValueError
