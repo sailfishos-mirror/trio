@@ -359,7 +359,7 @@ class CancelStatus:
     an abort when their direct parent CancelStatus becomes cancelled.
 
     You can think of CancelStatus as being responsible for the
-    "plumbing" of cancellations as oppposed to CancelScope which is
+    "plumbing" of cancellations as opposed to CancelScope which is
     responsible for the origination of them.
 
     """
