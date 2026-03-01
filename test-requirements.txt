@@ -16,7 +16,7 @@ babel==2.18.0
     # via sphinx
 black==26.1.0 ; implementation_name == 'cpython'
     # via -r test-requirements.in
-certifi==2026.1.4
+certifi==2026.2.25
     # via requests
 cffi==2.0.0 ; os_name == 'nt' or platform_python_implementation != 'PyPy'
     # via
@@ -56,8 +56,10 @@ exceptiongroup==1.3.1 ; python_full_version < '3.11'
     # via
     #   -r test-requirements.in
     #   pytest
-filelock==3.24.0
-    # via virtualenv
+filelock==3.24.3
+    # via
+    #   python-discovery
+    #   virtualenv
 identify==2.6.16
     # via pre-commit
 idna==3.11
@@ -69,13 +71,13 @@ imagesize==1.4.1
     # via sphinx
 iniconfig==2.3.0
     # via pytest
-isort==7.0.0
+isort==8.0.1
     # via pylint
 jedi==0.19.2 ; implementation_name == 'cpython'
     # via -r test-requirements.in
 jinja2==3.1.6
     # via sphinx
-librt==0.8.0 ; implementation_name == 'cpython' and platform_python_implementation != 'PyPy'
+librt==0.8.1 ; implementation_name == 'cpython' and platform_python_implementation != 'PyPy'
     # via mypy
 markupsafe==3.0.3
     # via jinja2
@@ -105,10 +107,11 @@ pathspec==1.0.4 ; implementation_name == 'cpython'
     # via
     #   black
     #   mypy
-platformdirs==4.9.0
+platformdirs==4.9.2
     # via
     #   black
     #   pylint
+    #   python-discovery
     #   virtualenv
 pluggy==1.6.0
     # via pytest
@@ -120,7 +123,7 @@ pygments==2.19.2
     # via
     #   pytest
     #   sphinx
-pylint==4.0.4
+pylint==4.0.5
     # via -r test-requirements.in
 pyopenssl==25.3.0
     # via -r test-requirements.in
@@ -128,6 +131,8 @@ pyright==1.1.408
     # via -r test-requirements.in
 pytest==9.0.2
     # via -r test-requirements.in
+python-discovery==1.1.0
+    # via virtualenv
 pytokens==0.4.1 ; implementation_name == 'cpython'
     # via black
 pyyaml==6.0.3
@@ -136,7 +141,7 @@ requests==2.32.5
     # via sphinx
 roman-numerals==4.1.0 ; python_full_version >= '3.11'
     # via sphinx
-ruff==0.15.2
+ruff==0.15.4
     # via -r test-requirements.in
 sniffio==1.3.1
     # via -r test-requirements.in
@@ -177,7 +182,7 @@ types-cffi==1.17.0.20250915
     # via
     #   -r test-requirements.in
     #   types-pyopenssl
-types-docutils==0.22.3.20251115
+types-docutils==0.22.3.20260223
     # via -r test-requirements.in
 types-pyopenssl==24.1.0.20240722
     # via -r test-requirements.in
@@ -198,7 +203,7 @@ typing-extensions==4.15.0
     #   virtualenv
 urllib3==2.6.3
     # via requests
-uv==0.10.4
+uv==0.10.7
     # via -r test-requirements.in
-virtualenv==20.36.1
+virtualenv==21.1.0
     # via pre-commit
